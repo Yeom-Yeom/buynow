@@ -15,7 +15,7 @@ import static com.example.buynow.jwt.JwtProperties.*;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/members")
 public class UserController {
     private final UserService signUpService;

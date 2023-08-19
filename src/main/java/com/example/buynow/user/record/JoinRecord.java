@@ -5,7 +5,7 @@ import com.example.buynow.user.repository.UserRepository;
 import lombok.Builder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-public record JoinRecord(String userid, String email, String username, String password) {
+public record JoinRecord(String userid, String email, String username, String password, String address) {
     @Builder
     public JoinRecord{
 
@@ -23,6 +23,7 @@ public record JoinRecord(String userid, String email, String username, String pa
                 .email(email)
                 .userid(userid)
                 .password(passwordEncoder.encode(password))
+                .address(address)
                 .build();
     }
 }

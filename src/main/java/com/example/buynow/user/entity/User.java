@@ -26,11 +26,15 @@ public class User {
     @Column(nullable = false)
     private String password;
 
+    @Column(nullable = false)
+    private String address;
+
     @Builder
-    public User(String email, String username, String userid, String password){
+    public User(String email, String username, String userid, String password, String address){
         this.email = email;
         this.username = username;
         this.userid = userid;
         this.password = password;
+        this.address = address;
     }
 }

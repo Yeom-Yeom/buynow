@@ -21,7 +21,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     private final AuthenticationManager manager;
 
     // 인증 시도
-    public Authentication attempAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException{
+    public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException{
         ObjectMapper mapper = new ObjectMapper();
         LoginRecord loginRecord = null;
 
