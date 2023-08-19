@@ -1,6 +1,7 @@
 package com.example.buynow.order.entity;
 
 import com.example.buynow.product.entity.Product;
+import com.example.buynow.user.entity.User;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Setter;
@@ -17,17 +18,17 @@ public class Order {
     private Product product;
 
     @Column(nullable = false)
-    private String customerName;
+    private String username;
     @Column(nullable = false)
-    private String shippingAddress;
+    private String address;
 
     public Order(){
 
     }
     @Builder
-    public Order(Product product, String customerName, String shippingAddress){
+    public Order(Product product, String username, String address){
         this.product = product;
-        this.customerName = customerName;
-        this.shippingAddress = shippingAddress;
+        this.username = username;
+        this.address = address;
     }
 }
